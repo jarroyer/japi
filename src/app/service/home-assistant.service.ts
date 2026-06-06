@@ -16,7 +16,8 @@ export default class HomeAssistantService {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.token}`
       }
-    }
-    ).then((res) => res.json()).then(data => data.message);
+    })
+      .then((res) => res.json())
+      .then(data => data.message);
   }
 }

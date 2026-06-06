@@ -1,6 +1,8 @@
-import HomeAssistantService from "@/src/app/service/home-assistant.service";
+import HomeAssistantService from "@/app/service/home-assistant.service";
+import Env from "@/app/config/env";
 
-const homeAssistantService = new HomeAssistantService(process.env.HOME_ASSISTANT_TOKEN, process.env.HOME_ASSISTANT_URL);
+const env = new Env();
+const homeAssistantService = new HomeAssistantService(env.homeAssistantToken, env.homeAssistantUrl);
 
 export default function Home() {
   const apiResp = homeAssistantService.api();
