@@ -1,0 +1,75 @@
+.nav-bar {
+    position: relative;
+    padding: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Side navigation panel setup */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Off-screen by default */
+    width: 250px;
+    height: 100vh;
+    background-color: #222;
+    padding-top: 80px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.2s;
+}
+
+.nav-links li a:hover {
+    background-color: #444;
+}
+
+.menu-toggle:checked ~ .side-nav {
+    transform: translateX(250px);
+}
+
+.menu-toggle:checked + .hamburger-btn .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle:checked + .hamburger-btn .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger-btn .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}

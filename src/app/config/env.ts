@@ -1,4 +1,3 @@
-
 export default class Env {
 
   homeAssistantUrl: string;
