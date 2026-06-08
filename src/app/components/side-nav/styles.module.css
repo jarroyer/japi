@@ -23,7 +23,7 @@
 .bar {
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--foreground);
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
@@ -35,10 +35,11 @@
     left: -250px; /* Off-screen by default */
     width: 250px;
     height: 100vh;
-    background-color: #222;
+    background-color: var(--background);
     padding-top: 80px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    border-right: 1px solid var(--foreground);
 }
 
 .nav-links {
